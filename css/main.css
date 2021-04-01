@@ -86,7 +86,70 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+/* ========================================================
+Index
+========================================================== */
+*, h1{
+  margin: 0;
+  padding: 0;
+}
+.top{
+  background-color: #344966;
+  color: rgb(241, 235, 235);
+}
+h1{
+margin-left: 1em;
+}
+main{
+  min-height: 80vh;
+}
+ul{
+  list-style-type: none;
+}
+#titre{
+  margin: 1em;
+}
+/* ========================================================
+Footer
+========================================================== */
 
+.abtUs, .expUs, .supT{
+	margin-bottom: 3vh;
+}
+.botlist{
+  display: flex;
+  
+}
+.botlist li{
+  margin-right: 10vw;
+}
+.copy{
+	margin-bottom:1vh;
+  justify-content: center;
+  display: flex;
+  margin-left: auto;
+  font-size: 0.8em;
+}
+.abtUs ion-icon{
+	font-size: 20px;
+}
+
+/*========================Touchpads code=======================*/
+@media screen and (min-width: 768px ){
+	.container{
+		display: flex;
+		justify-content: space-between;
+	}
+}
+/*========================Desktop code==========================*/
+@media screem and (min-width: 1024px){
+	.container{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
