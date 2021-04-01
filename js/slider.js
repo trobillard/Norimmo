@@ -8,6 +8,6 @@ function changeSlide(sens){
     if (slide > sliderJs.length -1)
         slide = 0;
     document.getElementById("slide").src = sliderJs[slide]
+ 
 }
-
-console.log("changeSlide");
+setInterval("changeSlide(1)", 6000);
