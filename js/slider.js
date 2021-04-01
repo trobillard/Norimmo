@@ -1,4 +1,4 @@
-let sliderJs = new Array("img/maison1.jpg", "img/maison2.jpg", "img/maison3.jpg");
+let sliderJs = ["img/maison1.jpg", "img/maison2.jpg", "img/maison3.jpg"];
 let slide = 0;
 
 function changeSlide(sens){
