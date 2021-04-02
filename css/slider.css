@@ -5,15 +5,16 @@ main{
 }
 h2{
     padding-top :5vh;
+    font-weight: bold;
 }
+
+/*Slider */
 .imgMaison{
     width: 70vw;
     height: auto;
 }
 
 #slider{
-    position: relative;
-    margin: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -30,25 +31,6 @@ h2{
     font-size : 2em
 
 }
-
-.introd{
-    margin-top: 5vh;
-    margin-bottom: 5vh;
-    max-width :60vw;
-
-}
-.introduction{
-    display: flex;
-    justify-content: center;
-
-}
-.fBleu{
-    background-color: #344966;
-    color: rgb(241, 235, 235);
-}
-.fBlanc{
-    color: #344966;
-}
 #previous {
     left: 5vw;
 }
@@ -58,10 +40,25 @@ h2{
 }
 
 
-#slider:hover #previous,
-#slider:hover #next{
-    opacity: 1;
+/* paragraph under slider*/
+.introd{
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    max-width :60vw;
+
 }
+.introduction{
+    display: flex;
+    justify-content: center;
+}
+.fBleu{
+    background-color: #344966;
+    color: rgb(241, 235, 235);
+}
+.fBlanc{
+    color: #344966;
+}
+
 
 @media screen and (min-width : 720px){
     #previous, #next{
@@ -79,7 +76,7 @@ h2{
 
 @media screen and (min-width : 1024px){
     #previous, #next{
-        font-size:5em;
+        font-size:4em;
     }
     #previous {
         left: 8vw;
