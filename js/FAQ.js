@@ -20,9 +20,9 @@ togg1.addEventListener("click", () => {
 
 togg2.addEventListener("click", () => {
     if(getComputedStyle(d2).display != "none"){
-      d2.style.display = "none";
+    d2.style.display = "none";
     } else {
-      d2.style.display = "block";
+    d2.style.display = "block";
     }
   })
 
