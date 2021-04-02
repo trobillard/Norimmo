@@ -89,19 +89,33 @@ textarea {
 /* ========================================================
 Index
 ========================================================== */
-*, h1{
+*{
   margin: 0;
   padding: 0;
 }
+body{
+  background-color: rgb(241, 235, 235);;
+}
 .top{
+  background-image: url(panoramabg.jpg);
+  color: rgb(241, 235, 235);
+}
+.low{
   background-color: #344966;
   color: rgb(241, 235, 235);
 }
 h1{
 margin-left: 1em;
+padding: 0;
+}
+h2{
+  font-family: 'Permanent Marker', cursive;
+  margin-top: 1em;
 }
 main{
   min-height: 80vh;
+  width: 100%;
+  margin: 0;
 }
 ul{
   list-style-type: none;
@@ -137,10 +151,27 @@ Footer
 FAQ
 ========================================================== */
 #d1, #d2, #d3, #d4, #d5, #d6{
-  display: none;
+  Display: none;
+  margin-bottom: 3em;
+}
+h6{
+  margin-top: 1em;
 }
 .container{
   display: flex;
+}
+button{
+  background-color: #344966;
+  color: white;
+  font-size: 30px;
+  border-radius: 20px;
+  border-color: #344966;
+  padding: 5px;
+  margin-bottom: 1em;
+}
+.faqcontainer{
+  width: 100%;
+  padding-right: 1em;
 }
 
 /*========================Touchpads code=======================*/
@@ -149,6 +180,11 @@ FAQ
 		display: flex;
 		justify-content: space-between;
 	}
+
+  .top{
+    background-image: url(panobg.jpg);
+    color: rgb(241, 235, 235);
+  }
 }
 /*========================Desktop code==========================*/
 @media screem and (min-width: 1024px){
