@@ -18,7 +18,7 @@
   
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/slider.css">
+  <link rel="stylesheet" href="css/devis.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Permanent+Marker&display=swap" rel="stylesheet"> 
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -26,7 +26,6 @@
 
   <meta name="theme-color" content="#fafafa">
 </head>
-<script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 <body>
   <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -67,45 +66,37 @@
   </header>
   <main>
     <section>
-      <h2 class="fBlanc">Nos précédents projets</h2>
-      <div id="slider">
-        <img class="imgMaison" src="img/maison1.jpg" alt="Maison 1" id="slide" >
-        <!-- on click : add  or remove 1 of the index of the table that cause the image to change -->
-        <ion-icon name="chevron-back-outline" id="previous" onclick="changeSlide(1)"></ion-icon>
-        <ion-icon name="chevron-forward-outline" id="next" onclick="changeSlide(-1)"></ion-icon>
-    </div>
-    </section> 
-    <section class="fBlanc">
-      <h2>
-        Achat, Vente, Location
-      </h2>
-      <div class="introduction">
-      <p class="introd">
-        Notre équipe de conseillers vous accueille dans notre agence de Mont Saint Aignan du lundi au samedi pour vous conseiller et présenter le plus grand choix de maisons, appartements et propriétés à la vente sur la région de Mont Saint Aignan, Bois Guillaume, Bihorel, Saint Martin du Vivier, Isneauville, Quincampoix, Houppeville, Préaux, Roncherolle le vivier, Bosc Guérard Saint Adrien, Cailly, Bosc le Hard et tout le plateau nord de Rouen. Des experts du marché local
-      </p>
-    </div>
+        <div class="row">
+            <div class=col-4>
+                <form>
+                    <fieldset>
+                        <legend class="titre">La maison de vos rêves :</legend>
+                        <div>
+                            <label for="surface">Surface en m²</label>
+                            <input type="number" id="surface" name="surface" min="10" step ="5" max ="200">
+                        </div>
+                        <div>
+                            <label for="chamber">Nombre de chambres</label>
+                            <input type="number" id="chamber" name="chamber" min="1" max="10">
+                        </div>
+                        <div>
+                            <label for="materiau">Matériaux désirés</label>
+                            <select name="materiau" id="materiau">
+                                <option value="parpaing">Parpaing</option>
+                                <option value="bois">Bois</option>
+                                <option value="brique">Brique</option>
+                            </select>
+                        </div>
+                    </fieldset>
+                </form>
+                <button class="btn btn-success" onclick="devis();">Estimer</button> 
+            </div>
+            <div class="col-8">
+                <h3 class="titre">Votre estimation :</h3>
+                <div id="estim"></div>
+            </div>
+        </div>
     </section>
-    <section class="fBleu">
-      <h2>
-        Des experts du marché local
-      </h2>
-      <div class="introduction">
-      <p class="introd">
-        Depuis notre agence LA RESIDENCE, vous pouvez également consulter grâce à notre fichier immobilier commun de maison, terrain, appartement, propriété neuf ou ancien, à vendre par l'ensemble de nos agences. Efficacité, professionnalisme, proximité, honnêteté et transparence sont des valeurs fondamentales qui nous animent.
-      </p>
-    </div>
-    </section>
-    <section class="fBlanc">
-      <h2>
-        Technologies et nouveautés
-      </h2>
-      <div class="introduction">
-      <p class="introd">
-        Nous mettons à votre service les dernières technologies relatives à l'immobilier dans le cadre de nos mandats "Ventes Privées" : reportages photos grand angle HDR de qualité professionnelle, publicité sur les supports professionnels et les réseaux sociaux, etc. Des professionnels aux services des particuliers. 
-      </p>
-    </div>
-    </section>
-
   </main>
     <footer class="top py-3">
       <article class ="container">
@@ -143,13 +134,14 @@
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
-  <script src="js/slider.js"></script>
+  <script src="js/devis.JS"></script>
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>
     window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
     ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
   </script>
+  <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
   <script src="https://www.google-analytics.com/analytics.js" async></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
