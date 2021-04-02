@@ -173,7 +173,13 @@ button{
   width: 100%;
   padding-right: 1em;
 }
-
+/* ========================================================
+mention legal
+========================================================== */
+#notice {
+	text-align:justify;
+	margin: 1em;
+}
 /*========================Touchpads code=======================*/
 @media screen and (min-width: 768px ){
 	.container{
@@ -182,7 +188,7 @@ button{
 	}
 
   .top{
-    background-image: url(panobg.jpg);
+    background-image: url(panoramabg.jpg);
     color: rgb(241, 235, 235);
   }
 }
