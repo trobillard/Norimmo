@@ -1,10 +1,12 @@
 main{
     text-align: center;
+    background-color: rgb(241, 235, 235);
+
 }
 h2{
-    margin-top :5vh;
+    padding-top :5vh;
 }
-.maison{
+.imgMaison{
     width: 70vw;
     height: auto;
 }
@@ -16,7 +18,6 @@ h2{
     align-items: center;
     justify-content: center;
     margin-top: 5vh;
-    margin-bottom : 10vh;
     background-color: #344966;
 
 }
@@ -26,7 +27,7 @@ h2{
     display: flex;
     position: absolute;
     color: rgb(241, 235, 235);
-    font-size:5em;
+    font-size : 2em
 
 }
 
@@ -41,21 +42,50 @@ h2{
     justify-content: center;
 
 }
-.pouet{
+.fBleu{
     background-color: #344966;
     color: rgb(241, 235, 235);
 }
-
+.fBlanc{
+    color: #344966;
+}
 #previous {
-    left: 10vw;
+    left: 5vw;
 }
 
 #next {
-    right: 10vw;
+    right: 5vw;
 }
 
 
 #slider:hover #previous,
 #slider:hover #next{
     opacity: 1;
+}
+
+@media screen and (min-width : 720px){
+    #previous, #next{
+        font-size:3em;
+    }
+    #previous {
+        left: 8vw;
+    }
+    
+    #next {
+        right: 8vw;
+    }
+
+}
+
+@media screen and (min-width : 1024px){
+    #previous, #next{
+        font-size:5em;
+    }
+    #previous {
+        left: 8vw;
+    }
+    
+    #next {
+        right: 8vw;
+    }
 }
