@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title></title>
+  <title>NorImmo</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -18,6 +18,7 @@
   
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/slider.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Permanent+Marker&display=swap" rel="stylesheet"> 
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -38,16 +39,16 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Devis</a>
+              <a class="nav-link" href="devis.html">Devis</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">FAQ</a>
+              <a class="nav-link" href="FAQ.html">FAQ</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
+              <a class="nav-link" href="contact.html">Contact</a>
             </li>
           </ul>
           <form class="d-flex">
@@ -65,9 +66,48 @@
     </section>
   </header>
   <main>
+    <section>
+      <h2 class="fBlanc">Nos précédents projets</h2>
+      <div id="slider">
+        <img class="imgMaison" src="img/maison1.jpg" alt="Maison 1" id="slide" >
+        <!-- on click : add  or remove 1 of the index of the table that cause the image to change -->
+        <ion-icon name="chevron-back-outline" id="previous" onclick="changeSlide(1)"></ion-icon>
+        <ion-icon name="chevron-forward-outline" id="next" onclick="changeSlide(-1)"></ion-icon>
+    </div>
+    </section> 
+    <section class="fBlanc">
+      <h2>
+        Achat, Vente, Location
+      </h2>
+      <div class="introduction">
+      <p class="introd">
+        Notre équipe de conseillers vous accueille dans notre agence de Mont Saint Aignan du lundi au samedi pour vous conseiller et présenter le plus grand choix de maisons, appartements et propriétés à la vente sur la région de Mont Saint Aignan, Bois Guillaume, Bihorel, Saint Martin du Vivier, Isneauville, Quincampoix, Houppeville, Préaux, Roncherolle le vivier, Bosc Guérard Saint Adrien, Cailly, Bosc le Hard et tout le plateau nord de Rouen. Des experts du marché local
+      </p>
+    </div>
+    </section>
+    <section class="fBleu">
+      <h2>
+        Des experts du marché local
+      </h2>
+      <div class="introduction">
+      <p class="introd">
+        Depuis notre agence LA RESIDENCE, vous pouvez également consulter grâce à notre fichier immobilier commun de maison, terrain, appartement, propriété neuf ou ancien, à vendre par l'ensemble de nos agences. Efficacité, professionnalisme, proximité, honnêteté et transparence sont des valeurs fondamentales qui nous animent.
+      </p>
+    </div>
+    </section>
+    <section class="fBlanc">
+      <h2>
+        Technologies et nouveautés
+      </h2>
+      <div class="introduction">
+      <p class="introd">
+        Nous mettons à votre service les dernières technologies relatives à l'immobilier dans le cadre de nos mandats "Ventes Privées" : reportages photos grand angle HDR de qualité professionnelle, publicité sur les supports professionnels et les réseaux sociaux, etc. Des professionnels aux services des particuliers. 
+      </p>
+    </div>
+    </section>
 
   </main>
-    <footer class="top py-3">
+    <footer class="low py-3">
       <article class ="container">
         <div class="abtUs">
           <h3>About Us</h3>
@@ -78,21 +118,21 @@
           <h3>Explore Us</h3>
           <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="aboutus.html">About us</a></li>
+            <li><a href="#">About us</a></li>
           </ul>
         </div>
         <div class="supT">
           <h3>Support</h3>
           <ul>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact us</a></li>
+            <li><a href="devis.html">Services</a></li>
+            <li><a href="contact.html">Contact us</a></li>
           </ul>
         </div>
       </article>
       <div class="copy">
           <ul class="botlist">
             <li><a href="#">Private Policy</a></li>
-            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="mentionlegal.html">Terms & Conditions</a></li>
             <li><a href="#">Copyright @2021</a></li>
           </ul>
       </div>
@@ -103,6 +143,7 @@
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/slider.js"></script>
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>

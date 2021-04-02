@@ -1,0 +1,172 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>NorImmo</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+  
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Permanent+Marker&display=swap" rel="stylesheet"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Permanent+Marker&family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet"> 
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body class="bg-grey">
+
+  <!-- Add your site or application content here -->
+  <!-- HEADER -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"></a>
+        <img src="img/logo.jpg" alt="" width="30" height="24">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="devis.html">Devis</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="FAQ.html">FAQ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <section class="top py-3">
+      <div>
+      <h1>NorImmo</h1>
+      <p id="titre">Leader de la construction de maison individuelle en Normandie</p>
+      </div>
+    </section>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+    <!-- <p class="h1">TITRE PRINCIPAL</p> -->
+    <h1 class="text-center mt-3">CONTACT</h1>
+    <div class="container">
+      <div class="row" >
+        <!-- <div class="col-md-6 offset-3"> -->
+        <div class="col-6 offset-3">
+          <form action="" method="POST" class="mt-3" id="form" onsubmit="return checkForm()">
+
+            <div class="form-group">
+              <label for="lastName" class="form-label mt-1">Nom :</label>
+              <input type="text" id="lastName" name="lastName" class="form-control input-xl error" autofocus autocomplete="off">
+              <span id="errorLastName"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="firstName" class="form-label mt-1">Prénom :</label>
+              <input type="text" id="firstName" name="firstName" class="form-control" autocomplete="off">
+              <span id="errorFirstName"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="tel" class="form-label mt-1">Tél :</label>
+              <input type="tel" id="tel" name="tel" class="form-control" autocomplete="off">
+            </div>
+
+            <div class="form-group">
+              <label for="email" class="form-label mt-1">Email :</label>
+              <input type="email" id="email" name="email" class="form-control" autocomplete="off">
+              <span id="errorEmail"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="message" class="form-label mt-1">Message :</label>
+              <textarea name="message" id="message" class="form-control" rows="3"></textarea>
+              <span id="errorMessage"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary my-5">Envoyer</button>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+
+  <footer class="top py-3">
+    <article class="container">
+      <div class="abtUs">
+        <h3>About Us</h3>
+        <p>NorImmo<br> Rouen<br>
+          <ion-icon name="call"></ion-icon>0766666666<br>
+          <ion-icon name="mail"></ion-icon>
+          NorImmo@norimmo.com
+        </p>
+      </div>
+      <div class="expUs">
+        <h3>Explore Us</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="aboutus.html">About us</a></li>
+        </ul>
+      </div>
+      <div class="supT">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact us</a></li>
+        </ul>
+      </div>
+    </article>
+    <div class="copy">
+      <ul class="botlist">
+        <li><a href="#">Private Policy</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+        <li><a href="#">Copyright @2021</a></li>
+      </ul>
+    </div>
+  </footer>
+
+
+  <!-- Add your site or application content here -->
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/contact.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+</body>
+
+</html>
