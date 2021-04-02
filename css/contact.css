@@ -1,4 +1,4 @@
-* {
+*, h1, h2, h3, h4, h5, h6 {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -7,9 +7,18 @@
 body {
     min-height: 100vh;
     position: relative;
-    font-family: 'Caveat', sans-serif;
+    font-family: 'Dosis', sans-serif;
 }
 
 .bg-grey {
     background-color: #f1f1f1;
 }
+
+.form-control:focus {
+    background-color : rgb(202,255,202);
+  }
+
+  .box-red {
+    box-shadow: none !important ;
+    border: solid 1px red !important;
+  }
