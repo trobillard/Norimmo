@@ -92,12 +92,16 @@ Index
 *{
   margin: 0;
   padding: 0;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1em;
 }
+
 body{
-  background-color: rgb(241, 235, 235);;
+  background-color: rgb(241, 235, 235);
 }
 .top{
-  background-image: url(panoramabg.jpg);
+  background-color : #344966;
+  /* url(panoramabg.jpg); */
   color: rgb(241, 235, 235);
 }
 .low{
@@ -111,6 +115,9 @@ padding: 0;
 h2{
   font-family: 'Permanent Marker', cursive;
   margin-top: 1em;
+}
+h3{
+  font-family:'Permanent Marker', cursive;
 }
 main{
   min-height: 80vh;
@@ -164,6 +171,8 @@ FAQ
 }
 h6{
   margin-top: 1em;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1em;
 }
 .container{
   display: flex;
@@ -196,7 +205,7 @@ mention legal
 	}
 
   .top{
-    background-image: url(panoramabg.jpg);
+    background-color : #344966;
     color: rgb(241, 235, 235);
   }
 }
