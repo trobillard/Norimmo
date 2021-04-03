@@ -170,24 +170,40 @@ FAQ
 #d1, #d2, #d3, #d4, #d5, #d6{
   Display: none;
   margin-bottom: 3em;
+  background: #344966;
+  color: rgb(241, 235, 235);
+  width: 100%;
+  border-radius: 2rem;
+  padding: 1em;
 }
+
 h6{
   margin-top: 1em;
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.1em;
+  color:#344966;
 }
+
 /* .container{ */
   /* display: flex; */
 /* } */
+
 button{
   background-color: #344966;
-  color: white;
+  color: rgb(241, 235, 235);
   font-size: 30px;
   border-radius: 20px;
   border-color: #344966;
   padding: 5px;
   margin-bottom: 1em;
 }
+
+button:hover{
+  background-color:rgb(241, 235, 235);
+  border-color: rgb(241, 235, 235);
+  color: #344966;
+}
+
 .faqcontainer{
   width: 100%;
   padding-right: 1em;
