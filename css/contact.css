@@ -7,11 +7,15 @@
 body {
     min-height: 100vh;
     position: relative;
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Cormorant Garamond', sans-serif;
 }
 
 .bg-grey {
     background-color: #f1f1f1;
+}
+
+#lastName, #firstName {
+    text-transform: uppercase;
 }
 
 .form-control:focus {

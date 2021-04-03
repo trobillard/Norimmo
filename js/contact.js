@@ -10,58 +10,83 @@
 // }
 
 function checkForm() {
- 
-   if (lastName.value == '' || lastName.value.length < 2) {
+    // lastName
+    let lastName = document.getElementById("lastName");
+    // lastName must be not empty or length >= 2
+    if (lastName.value == '' || lastName.value.length < 2) {
         let errorLastNameme = document.getElementById("errorLastName");
         errorLastName.innerText = "Attention Le nom est obligatoire et doit contenir au moins 2 caractères"
+        // the focus must be on the input 
         lastName.focus();
+        // change the className
         lastName.className += " box-red";
         return false;
     }
     else {
+        // change the className
         lastName.className = "form-control form-control:focus"
         let errorLastNameme = document.getElementById("errorLastName");
         errorLastName.innerText = ""
     }
- 
+    // firstName
     let firstName = document.getElementById("firstName");
+    // firstName must be not empty or length >= 2
     if (firstName.value == '' || firstName.value.length < 2) {
         let errorFirstName = document.getElementById("errorFirstName");
         errorFirstName.innerText = "Attention Le prénom est obligatoire et doit contenir au moins 2 caractères"
+        // the focus must be on the input 
         firstName.focus();
+        // change the className
         firstName.className += " box-red";
         return false;
     }
     else {
+        // change the className
         firstName.className = "form-control form-control:focus"
         let errorFirstName = document.getElementById("errorFirstName");
         errorFirstName.innerText = ""
     }
+    // tel
+    let tel = document.getElementById("tel");
+    var regex = new RegExp(/^(01|02|03|04|05|06|08)[0-9]{8}/gi);
 
-    let email = document.getElementById("email");
-    if (email.value == '') {
-        let errorEmail = document.getElementById("errorEmail");
-        errorEmail.innerText = "Attention L'adresse Mail est obligatoire"
-        email.focus();
-        email.className += " box-red";
+    if (tel.value == '') {
+        let errorTel = document.getElementById("errorTel");
+        errorTel.innerText = "Attention Numéro de téléphone obligatoire"
+        // the focus must be on the input 
+        tel.focus();
+        // change the className
+        tel.className += " box-red";
+        return false;
+    }
+    else if (!regex.test(tel.value)) {
+        let errorTel = document.getElementById("errorTel");
+        errorTel.innerText = "Attention Numéro de téléphone incorrect"
+        // the focus must be on the input 
+        tel.focus();
+        // change the className
+        tel.className += " box-red";
         return false;
     }
     else {
-        errorEmail.className = "form-control form-control:focus"
-        let errorEmail = document.getElementById("errorEmail");
-        errorEmail.innerText = ""
+        errorTel.className = "form-control form-control:focus"
+        let errorTel = document.getElementById("errorTel");
+        errorTel.innerText = ""
     }
-
+    // message
     let message = document.getElementById("message");
-    // alert(message.value);
-    if (message.value === '') {
+    // empty message is not allowed
+    if (message.value == '') {
         let errorMessage = document.getElementById("errorMessage");
         errorMessage.innerText = "Attention Le Message est obligatoire"
+        // the focus must be on the input 
         message.focus();
+        // change the className
         message.className += " box-red";
         return false;
     }
     else {
+        // change the className
         message.className = "form-control form-control:focus"
         let errorMessage = document.getElementById("errorMessage");
         errorMessage.innerText = ""
@@ -76,22 +101,30 @@ function textArea(max) {
     let message = document.getElementById("message")
     let errorMessage = document.getElementById("errorMessage");
     errorMessage.innerText = max + " Caractère(s) restant(s)"
+    // on press the key 
     message.onkeypress = function () {
+        // calculate the remain character
         reste = max - message.value.length
+        // authorized overrun
         if (reste < 1) {
             return false;
         }
         errorMessage.innerText = reste + " Caractère(s) restant(s)"
     }
+    // release on the key
     message.onkeyup = function () {
+        // calculate the remain character
         reste = max - message.value.length
+        // authorized overrun
         if (reste < 0) {
             return false;
         }
         errorMessage.innerText = reste + " Caractère(s) restant(s)"
-
+        // not empty value
         if (message.value !== '') {
-            for (let i=0 ; i < words.length; i++) {
+            // loop the words of table 
+            for (let i = 0; i < words.length; i++) {
+                // not found
                 if (message.value.indexOf(words[i]) > -1) {
                     message.className += " box-red";
                     break;
@@ -108,7 +141,8 @@ textArea(400);
 
 function checkLastname() {
     let lastName = document.getElementById("lastName");
-    lastName.addEventListener("keypress", function(event) {
+    lastName.addEventListener("keypress", function (event) {
+        // keys 0 to 9 are not allowed, max 50 characters
         if ((event.keyCode >= 48 && event.keyCode <= 57) || lastName.value.length >= 50) {
             event.preventDefault();
         }
@@ -119,7 +153,8 @@ checkLastname();
 
 function checkFirstname() {
     let firstName = document.getElementById("firstName");
-    firstName.addEventListener("keypress", function(event) {
+    firstName.addEventListener("keypress", function (event) {
+        // keys 0 to 9 are not allowed, max 50 characters
         if ((event.keyCode >= 48 && event.keyCode <= 57) || firstName.value.length >= 50) {
             event.preventDefault();
         }
