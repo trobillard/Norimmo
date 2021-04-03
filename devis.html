@@ -66,21 +66,21 @@
   </header>
   <main>
     <section>
-        <div class="row">
-            <div class=col-4>
+        <div class="row formMarg">
+            <div class="col-md-5">
                 <form>
                     <fieldset>
-                        <legend class="titre">La maison de vos rêves :</legend>
+                        <legend class="titre"><h3>La maison de vos rêves :</h3></legend>
                         <div>
-                            <label for="surface">Surface en m²</label>
-                            <input type="number" id="surface" name="surface" min="10" step ="5" max ="200">
+                            <label for="surface">Surface en m²</label> <br/>
+                            <input type="number" id="surface" name="surface" min="10" step ="5" max ="200" >
                         </div>
                         <div>
-                            <label for="chamber">Nombre de chambres</label>
+                            <label for="chamber">Nombre de chambres</label><br/>
                             <input type="number" id="chamber" name="chamber" min="1" max="10">
                         </div>
                         <div>
-                            <label for="materiau">Matériaux désirés</label>
+                            <label for="materiau">Matériaux désirés</label><br/>
                             <select name="materiau" id="materiau">
                                 <option value="parpaing">Parpaing</option>
                                 <option value="bois">Bois</option>
@@ -88,11 +88,11 @@
                             </select>
                         </div>
                     </fieldset>
-                </form>
+                </form><br/>
                 <button class="btn btn-success" onclick="devis();">Estimer</button> 
             </div>
-            <div class="col-8">
-                <h3 class="titre">Votre estimation :</h3>
+            <div class="col-md-5 offset-md-2 offset-lg-0">
+                <h3 class="titre">Votre estimation :</h3><br/>
                 <div id="estim"></div>
             </div>
         </div>
