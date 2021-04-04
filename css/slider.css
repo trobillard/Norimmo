@@ -8,6 +8,10 @@ h2{
     font-weight: bold;
 }
 
+.premier h2{
+    color: black;
+}
+
 /*Slider */
 .imgMaison{
     width: 70vw;

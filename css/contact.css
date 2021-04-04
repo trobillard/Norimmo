@@ -4,6 +4,10 @@
     box-sizing: border-box;
 } */
 
+h2{
+    color: black;
+}
+
 body {
     min-height: 100vh;
     position: relative;
@@ -12,6 +16,7 @@ body {
 
 .bg-grey {
     background-color: #f1f1f1;
+    color: #344966;
 }
 
 #lastName, #firstName {
@@ -20,6 +25,7 @@ body {
 
 .form-control:focus {
     background-color : rgb(202,255,202);
+    color: black;
   }
 
   .box-red {

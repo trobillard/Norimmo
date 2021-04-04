@@ -93,7 +93,7 @@ Index
   margin: 0;
   padding: 0;
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.1em;
+  /* font-size: 1.1em; */
 }
 
 body{
@@ -137,7 +137,7 @@ Footer
 .abtUs, .expUs, .supT{
 	margin-bottom: 3vh;
   margin-left: 1em;
-	width: 35%;
+	width: 80%;
 }
 .botlist{
   display: flex;
@@ -222,11 +222,16 @@ mention legal
 		justify-content: space-between;
 	}
 
+  *{
+    font-size: 1.1em;
+  }
+
   .top{
     background-color : #344966;
     color: rgb(241, 235, 235);
   }
 }
+
 /*========================Desktop code==========================*/
 @media screem and (min-width: 1024px){
 	.container{

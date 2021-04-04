@@ -1,9 +1,23 @@
+h2{
+    color: black;
+}
+
 main{
     background-color:  rgb(241, 235, 235);
+    color: #344966;
 }
-.titre{
+.titre{ 
     padding-top: 5vh;
-}
+} 
+
 .formMarg{
     padding-left: 5vw;
+}
+
+label, option{
+    font-size: 0.8em;
+}
+
+#materiau{
+    width: 40%;
 }
