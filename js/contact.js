@@ -127,7 +127,7 @@ function textArea(max) {
             return false;
         }
         errorMessage.innerText = reste + " Caractère(s) restant(s)"
-        let regex = new RegExp(/(sex|sexe|con|connard)/gi);
+        let regex = new RegExp(/\bsex\b|\bsexe\b|\bcon\b|\bconnard\b/gi);
          // not empty value
          if (message.value !== '') {
             if (regex.test(message.value)) {
