@@ -46,9 +46,36 @@ function checkForm() {
         let errorFirstName = document.getElementById("errorFirstName");
         errorFirstName.innerText = ""
     }
+
+    // message
+    let message = document.getElementById("message");
+    // empty message is not allowed
+    if (message.value == '') {
+        let errorMessage = document.getElementById("errorMessage");
+        errorMessage.innerText = "Attention Le Message est obligatoire"
+        // the focus must be on the input 
+        message.focus();
+        // change the className
+        message.className += " box-red";
+        return false;
+    }
+    else if (message.className.indexOf("box-red") > -1) {
+        let errorMessage = document.getElementById("errorMessage");
+        errorMessage.innerText = "Attention Le Message contient des mots non permis (sex,sexe,con,connard)"
+        // the focus must be on the input 
+        message.focus();
+        return false;
+    }
+    else {
+        // change the className
+        message.className = "form-control form-control:focus"
+        let errorMessage = document.getElementById("errorMessage");
+        errorMessage.innerText = ""
+    }
+
     // tel
     let tel = document.getElementById("tel");
-    var regex = new RegExp(/^(01|02|03|04|05|06|08)[0-9]{8}/gi);
+    let regex = new RegExp(/^(01|02|03|04|05|06|08)[0-9]{8}/gi);
 
     if (tel.value == '') {
         let errorTel = document.getElementById("errorTel");
@@ -73,35 +100,15 @@ function checkForm() {
         let errorTel = document.getElementById("errorTel");
         errorTel.innerText = ""
     }
-    // message
-    let message = document.getElementById("message");
-    // empty message is not allowed
-    if (message.value == '') {
-        let errorMessage = document.getElementById("errorMessage");
-        errorMessage.innerText = "Attention Le Message est obligatoire"
-        // the focus must be on the input 
-        message.focus();
-        // change the className
-        message.className += " box-red";
-        return false;
-    }
-    else {
-        // change the className
-        message.className = "form-control form-control:focus"
-        let errorMessage = document.getElementById("errorMessage");
-        errorMessage.innerText = ""
-    }
-
     return true;
 }
 
-let words = ["sexe", "sex", "con", "connard"];
 function textArea(max) {
     let reste;
     let message = document.getElementById("message")
     let errorMessage = document.getElementById("errorMessage");
     errorMessage.innerText = max + " Caractère(s) restant(s)"
-    // on press the key 
+    // press on the key 
     message.onkeypress = function () {
         // calculate the remain character
         reste = max - message.value.length
@@ -120,18 +127,14 @@ function textArea(max) {
             return false;
         }
         errorMessage.innerText = reste + " Caractère(s) restant(s)"
-        // not empty value
-        if (message.value !== '') {
-            // loop the words of table 
-            for (let i = 0; i < words.length; i++) {
-                // not found
-                if (message.value.indexOf(words[i]) > -1) {
-                    message.className += " box-red";
-                    break;
-                }
-                else {
-                    message.className = "form-control form-control:focus"
-                }
+        let regex = new RegExp(/(sex|sexe|con|connard)/gi);
+         // not empty value
+         if (message.value !== '') {
+            if (regex.test(message.value)) {
+                message.className += " box-red";
+            }
+            else {
+                message.className = "form-control form-control:focus"
             }
         }
     }
