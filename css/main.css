@@ -108,6 +108,7 @@ body{
   background-color: #344966;
   color: rgb(241, 235, 235);
 }
+
 h1{
 margin-left: 1em;
 padding: 0;
@@ -138,7 +139,13 @@ Footer
 	margin-bottom: 3vh;
   margin-left: 1em;
 	width: 80%;
+  font-size: 0.8em;
 }
+
+.abtUs h3, .expUs h3, .supT h3{
+  font-size: 1em;
+}
+
 .botlist{
   display: flex;
   
@@ -220,6 +227,8 @@ mention legal
 	.container{
 		display: flex;
 		justify-content: space-between;
+    margin-bottom: 0;
+    margin-right: 0;
 	}
 
   *{
